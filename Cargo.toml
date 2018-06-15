@@ -1,0 +1,11 @@
+[package]
+name = "study-rustlang"
+version = "0.1.0"
+authors = ["Zongmin Lei <leizongmin@gmail.com>"]
+
+[dependencies]
+rocket = "0.3"
+rocket_codegen = "0.3"
+rocket_contrib = "0.3"
+serde_derive = "1.0"
+serde = "1.0"

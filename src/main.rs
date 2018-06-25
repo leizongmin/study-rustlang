@@ -27,6 +27,11 @@ fn index() -> Json {
     }))
 }
 
+#[get("/redirect")]
+fn redirect() -> response::Redirect {
+    response::Redirect::to("/")
+}
+
 #[post("/post", format = "application/json", data = "<message>")]
 fn post(message: Json<Message>) -> Json {
     Json(json!({ "id": message.id, "contents": message.contents}))
@@ -51,5 +56,6 @@ fn main() {
         .mount("/", routes![index])
         .mount("/", routes![serve_file])
         .mount("/", routes![post])
+        .mount("/", routes![redirect])
         .launch();
 }

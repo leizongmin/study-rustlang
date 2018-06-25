@@ -3,6 +3,14 @@ name = "study-rustlang"
 version = "0.1.0"
 authors = ["Zongmin Lei <leizongmin@gmail.com>"]
 
+[[bin]]
+name = "study-rustlang"
+path = "src/main.rs"
+
+[[bin]]
+name = "study-rustlang-hello"
+path = "src/hello/main.rs"
+
 [dependencies]
 rocket = "0.3"
 rocket_codegen = "0.3"
